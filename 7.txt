@@ -1,0 +1,10 @@
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+Route::post('/submit', function (Request $request) {
+    $email = $request->input('email');
+    return response()->json([
+        'success' => true,
+        'message' => 'Form submitted successfully.'
+    ]);
+});

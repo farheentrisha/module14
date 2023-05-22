@@ -1,0 +1,14 @@
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
+public function myControllerMethod(Request $request)
+{
+    if ($request->hasFile('avatar')) {
+        $file = $request->file('avatar');
+        $originalFilename = $file->getClientOriginalName();
+        $path = $file->storeAs('public/uploads', $originalFilename);
+        YourModel::create(['file_path' => $path]);
+    }
+
+
+}

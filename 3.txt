@@ -1,0 +1,15 @@
+use Illuminate\Http\Request;
+
+public function myControllerMethod(Request $request)
+{
+    $page = $request->input('page', null);
+
+    if ($page !== null)
+   {
+        
+    } else
+    {
+      
+    }
+    return view('your-view', ['page' => $page]);
+}

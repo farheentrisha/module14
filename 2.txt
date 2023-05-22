@@ -1,0 +1,8 @@
+use Illuminate\Http\Request;
+
+public function myControllerMethod(Request $request)
+{
+    $userAgent = $request->header('User-Agent');
+    Log::info('User-Agent: ' . $userAgent);
+    return view('your-view', ['userAgent' => $userAgent]);
+}

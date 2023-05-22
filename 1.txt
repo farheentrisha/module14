@@ -1,0 +1,8 @@
+use Illuminate\Http\Request;
+
+public function myControllerMethod(Request $request)
+{
+    $name = $request->input('name');
+    model::create(['name' => $name]);
+    return view('your-view', ['name' => $name]);
+}

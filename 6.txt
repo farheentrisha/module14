@@ -1,0 +1,12 @@
+use Illuminate\Http\Request;
+
+public function myControllerMethod(Request $request)
+{
+    $rememberToken = $request->cookie('remember_token', null);
+    if ($rememberToken !== null) {
+  
+    } else {
+    }
+
+  
+}
